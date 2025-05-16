@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>ขอเป็นแฟนได้ไหม 🥺</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Prompt', sans-serif;
+      background: linear-gradient(120deg, #ffe4e1, #fff0f5);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      animation: fadeIn 1s ease-in-out;
+      position: relative;
+    }
+
+    /* เบลอรูปพื้นหลัง */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      filter: blur(10px) brightness(0.7);
+      z-index: -1;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #ff1493;
+      margin-bottom: 12px;
+      text-shadow: 0 0 10px #ff85c1;
+      animation: popUp 1.2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 50px;
+      text-shadow: 0 0 6px #00000066;
+    }
+
+    .btn {
+      font-size: 1.2rem;
+      padding: 14px 36px;
+      margin: 10px;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255,105,180,0.4);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .yes {
+      background-color: #ff69b4;
+      color: white;
+      box-shadow: 0 5px 15px #ff69b4aa;
+    }
+
+    .yes:hover {
+      background-color: #ff85c1;
+      transform: scale(1.1) rotate(-2deg);
+      box-shadow: 0 10px 25px #ff69b4cc;
+    }
+
+    .no {
+      background-color: #eee;
+      color: #666;
+      box-shadow: 0 5px 15px #ccc;
+    }
+
+    .no:hover {
+      background-color: #ddd;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px #bbb;
+    }
+
+    /* ดอกไม้ลอย */
+    .flower {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background: #ff69b4;
+      border-radius: 50%;
+      opacity: 0.8;
+      filter: drop-shadow(0 0 3px #ff85c1);
+      animation: floatFlower 8s linear infinite;
+    }
+
+    /* สุ่มตำแหน่งและดีเลย์ผ่าน inline style */
+    @keyframes floatFlower {
+      0% {
+        transform: translateY(0) scale(0.7);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-120vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes popUp {
+      0% {transform: scale(0.8); opacity: 0;}
+      100% {transform: scale(1); opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <h1>เป็นแฟนกันมุ้ย 💕</h1>
+  <p>เค้าอยากมีหนูไปในทุกๆวันเลยย ขอเข้าไปอยู่ในใจหนูได้มั้ย 🥺</p>
+
+  <div>
+    <a href="yes.html"><button class="btn yes">ได้สิ 💗</button></a>
+    <a href="no.html"><button class="btn no">ขอคิดดูก่อน...</button></a>
+  </div>
+
+  <!-- ดอกไม้ลอยเบาๆ (กำหนดตำแหน่งและดีเลย์) -->
+  <div class="flower" style="left: 10%; bottom: 0; animation-delay: 0s;"></div>
+  <div class="flower" style="left: 30%; bottom: -50px; animation-delay: 2s;"></div>
+  <div class="flower" style="left: 60%; bottom: -30px; animation-delay: 4s;"></div>
+  <div class="flower" style="left: 80%; bottom: -20px; animation-delay: 1s;"></div>
+  <div class="flower" style="left: 90%; bottom: -40px; animation-delay: 3s;"></div>
+</body>
+</html>
